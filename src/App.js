@@ -119,8 +119,6 @@ class App extends Component {
   }
 
   linearSubmit(value) {
-    // const value = Number(this.refs.linearInput.value);
-    console.log(value);
     for (let i = 0; i < data.length; i++) {
       if (value === data[i]) {
         this.setState({
@@ -129,7 +127,6 @@ class App extends Component {
         return;
       }
     }
-    console.log(this.state);
     this.setState({
       linearResult: `Search Failed after ${data.length} tries!`
     });
@@ -144,7 +141,6 @@ class App extends Component {
     }
     const index = Math.floor((start + end) / 2);
     const item = arr[index];
-    console.log(start, end);
     if (item == value) {
       return this.setState({
         binaryResult: `Search took ${counter + 1} tries!`
